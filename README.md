@@ -1,27 +1,38 @@
 # Self-Care & Mental Health Management Application
 
-A desktop application developed with **VB.NET (Windows Forms)** and **Microsoft SQL Server** designed to help students manage daily mental wellness, personal productivity, and peer/counselor consultations in a single platform.
+A desktop application developed with **VB.NET (Windows Forms)** and **SQLite** designed to help students manage daily mental wellness, personal productivity, and peer/counselor consultations in a single platform.
+
+## Application Preview
+
+| Sign In | Account Center & Overview |
+| :---: | :---: |
+| ![Sign In](screenshots/signin.png) | ![Account Center](screenshots/account-center.png) |
+
+| Mood Tracker | Personal Finance Tracker |
+| :---: | :---: |
+| ![Mood Tracker](screenshots/mood-tracker.png) | ![Finance Tracker](screenshots/finance-tracker.png) |
+
+| Student Consultation View | Counselor Consultation View |
+| :---: | :---: |
+| ![User Chat](screenshots/chat-user.png) | ![Counselor Chat](screenshots/chat-counselor.png) |
 
 ## Key Features
 
-### User Module
-- **Authentication & Profile Management:** Secure sign-up, login, password management, and account settings (`SignIn`, `SignUp`, `AccountCenterUser`, `ChangePassword`).
-- **Mood Tracker & History:** Daily emotional state logging with historical review (`MoodTracker`, `MoodHistory`).
-- **Personal Journaling:** Private digital diary for daily self-reflection (`Journal`).
-- **Productivity & Finance:** Built-in task management with completion logs (`ToDoList`, `ToDoHistory`) and personal expense tracking (`FinanceTracker`).
-- **Counselor Consultation:** Browse available counselors, send pairing requests, and communicate via an integrated messaging interface (`FindCounselor`, `PairWithCounselor`, `ChatRoom`).
+### Student / User Module
+- **Authentication & Account Overview:** Secure sign-up, login, profile updates, password management, and a centralized dashboard summarizing active tasks, journal counts, latest mood, and current balance (`SignIn`, `SignUp`, `AccountCenterUser`, `ChangePassword`).
+- **Mood Tracker & History:** Daily emotional state logging with visual mood indicators and contextual notes (`MoodTracker`, `MoodHistory`).
+- **Personal Journaling:** Private digital diary with date-based filtering for daily self-reflection (`Journal`).
+- **Task & Expense Management:** Built-in to-do list with due-date search and completion tracking (`ToDoList`, `ToDoHistory`), paired with an income/expense tracker that automatically calculates net balance (`FinanceTracker`).
+- **Counselor Consultation:** Browse available counselors by specialization, submit consultation requests, and chat directly within the app (`FindCounselor`, `PairWithCounselor`, `ChatRoom`).
 
 ### Counselor Module
-- **Consultation Management:** Review and accept incoming student consultation requests (`IncomingReq`) and manage counselor profiles (`AccountCenterCounselor`).
-- **Client Support & Monitoring:** Engage in consultation sessions via `ChatRoom` and review shared wellness logs.
+- **Consultation Request & Chat Management:** Review incoming student requests (`IncomingReq`), manage counselor profiles (`AccountCenterCounselor`), and conduct text-based counseling sessions (`ChatRoom`).
 
 ## Tech Stack
 - **Language & Framework:** Visual Basic .NET (VB.NET), .NET Framework (Windows Forms)
-- **Database:** Microsoft SQLite (ADO.NET via `Module1.vb` & `App.config`)
-- **IDE:** Microsoft Visual Studio
+- **Database:** SQLite (`selfcare_app.db` — schema available in `database/schema.sql`)
+- **IDE & Tools:** Microsoft Visual Studio, DB Browser for SQLite
 
-## Project Status & Planned Improvements
-Core CRUD operations, authentication, dual-role workflows, and SQL Server database integration are implemented. Planned future updates include:
-- Adding automated mood analytics charts and monthly financial summary reports.
-- Implementing password hashing and role-based session encryption enhancements.
-- Including full SQL Server database schema scripts (`.sql`) for one-click local setup.
+## Planned Improvements
+- Adding automated monthly mood trend charts and financial summary exports.
+- Implementing cryptographic password hashing (bcrypt/SHA-256) for enhanced account security.
