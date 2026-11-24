@@ -14,7 +14,7 @@ A desktop application developed with **VB.NET (Windows Forms)** and **SQLite** d
 
 | Student Consultation View | Counselor Consultation View |
 | :---: | :---: |
-| ![User Chat](screenshots/chat-user.png) | ![Counselor Chat](screenshots/chat-counselor.png) |
+| ![User Chat](screenshots/chat-counselor.png) | ![Counselor Chat](screenshots/chat-user.png) |
 
 ## Key Features
 
